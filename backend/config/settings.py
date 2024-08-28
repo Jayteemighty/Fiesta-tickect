@@ -32,8 +32,11 @@ INSTALLED_APPS = [
     # 3rd party apps
     "rest_framework",
     "corsheaders",
+    "rest_framework.authtoken",
     
 ]
+
+AUTH_USER_MODEL = "user.CustomUser"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

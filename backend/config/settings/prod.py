@@ -7,7 +7,7 @@ load_dotenv()
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': dj_database_url.config(

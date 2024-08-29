@@ -50,7 +50,7 @@ def send_verification_email(email):
     OTP.objects.create(email=user.email, otp=otp, otp_type='signup')
     
     subject = 'Welcome! Verify your email address'
-    body = f'Hi, {user.first_name}.\n\nThanks for signing up on Fabu.\nThis is your OTP to verify your account:\n{otp}.\n\nThe OTP expires after 10 minutes.\n\nIf you did not request for this OTP, kindly ignore.\nThank you.'
+    body = f'Hi, {user.first_name}.\n\nThanks for signing up on LaFiesta Tickets.\nThis is your OTP to verify your account:\n{otp}.\n\nThe OTP expires after 10 minutes.\n\nIf you did not request for this OTP, kindly ignore.\nThank you.'
     
     Util.send_email(user.email, subject, body)
     
@@ -64,7 +64,7 @@ def send_password_reset_email(email):
     OTP.objects.create(email=user.email, otp=otp, otp_type='passwordreset')
     
     subject = 'Password reset'
-    body = f'Hi, {user.first_name}.\n\nThanks for choosing Fabu.\nThis is your OTP to reset your password:\n{otp}\n\nThe OTP expires after 10 minutes..\n\nIf you did not request for this OTP, kindly ignore.\nThank you.'
+    body = f'Hi, {user.first_name}.\n\nThanks for choosing LaFiesta Tickets.\nThis is your OTP to reset your password:\n{otp}\n\nThe OTP expires after 10 minutes..\n\nIf you did not request for this OTP, kindly ignore.\nThank you.'
     
     Util.send_email(user.email, subject, body)
 

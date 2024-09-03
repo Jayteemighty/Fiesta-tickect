@@ -20,6 +20,7 @@ urlpatterns = [
     
     # Apps Api Url
     path("api/v1/user/", include('user.urls')),
+    path("api/v1/events/", include('events.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

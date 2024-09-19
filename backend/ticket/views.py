@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 from .models import Ticket, Payment
 from .serializers import TicketSerializer, PaymentSerializer
 from events.models import Event
-#from paystackapi.paystack import Paystack
+from paystackapi.paystack import Paystack
 
 paystack = Paystack(secret_key="your_secret_key")
 
